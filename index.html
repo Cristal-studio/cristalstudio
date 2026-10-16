@@ -173,14 +173,12 @@ header.open nav{transform:none}.burger{display:block}
 .sv li{grid-template-columns:1fr 2rem}.sv p{grid-column:1/-1;order:3}}
 @media(prefers-reduced-motion:reduce){*,::before,::after{animation:none!important;transition:none!important}.hero h1 span,.js .rv{opacity:1;transform:none}}
 
-/* ===== Intro, animations tech, FAQ ===== */
+/* ===== Intro, FAQ ===== */
 html.js:not(.go){overflow:hidden}
 html.js:not(.go) .hero *{animation-play-state:paused!important}
 html.js:not(.go) header{transform:translateY(-110%)}
 header{transition:background .4s,transform .9s cubic-bezier(.2,.8,.2,1) .5s}
 .btn{transition:transform .4s,box-shadow .4s,color .4s,border-color .4s,translate .25s}
-.logo::after{content:"_";color:var(--t);animation:bl 1s steps(1) infinite}
-@keyframes bl{50%{opacity:0}}
 #in{position:fixed;inset:0;z-index:100;background:var(--bg);animation:hide 0s 6s forwards}
 @keyframes hide{to{visibility:hidden}}
 .go #in{background:transparent;pointer-events:none}
@@ -194,27 +192,6 @@ header{transition:background .4s,transform .9s cubic-bezier(.2,.8,.2,1) .5s}
 #ldg .gi i{animation:pop .8s cubic-bezier(.3,1.4,.5,1) calc(var(--k)*.17s) backwards,gl 4.5s ease-in-out infinite}
 @keyframes pop{from{opacity:0;transform:translate(calc((var(--k) - 3.5)*60px),calc(var(--k)*14px - 130px)) scale(.3) rotate(calc(var(--k)*25deg - 90deg))}}
 .ld b{font:700 clamp(2.6rem,9vw,4.2rem)/1 var(--f);letter-spacing:-.04em}
-.ld small{display:block;overflow:hidden;white-space:nowrap;width:0;border-right:2px solid var(--t);font:500 .85rem ui-monospace,Menlo,Consolas,monospace;color:var(--mut);animation:ty2 1.6s steps(23) .3s forwards}
-@keyframes ty2{to{width:23ch}}
-body::before{content:"";position:fixed;inset:-28px 0 0;z-index:-1;pointer-events:none;background:radial-gradient(rgba(27,32,39,.18) 1px,transparent 1.6px) 0 0/28px 28px;animation:pan 3s linear infinite;-webkit-mask-image:linear-gradient(#000,transparent 80%);mask-image:linear-gradient(#000,transparent 80%)}
-@keyframes pan{to{transform:translateY(28px)}}
-#rain{position:absolute;inset:0;width:100%;height:100%;opacity:.55;-webkit-mask-image:linear-gradient(90deg,transparent,#000 25%,#000 75%,transparent);mask-image:linear-gradient(90deg,transparent,#000 25%,#000 75%,transparent)}
-.orb{position:absolute;inset:6%;animation:spin 30s linear infinite}
-.orb em{position:absolute;translate:-50% -50%;font:600 .78rem/1 ui-monospace,Menlo,Consolas,monospace;font-style:normal;padding:.5rem .8rem;border-radius:99px;background:rgba(255,255,255,.9);box-shadow:0 10px 24px -10px rgba(27,32,39,.4),0 0 0 1px var(--line);animation:spin 30s linear infinite reverse}
-.orb em:nth-child(1){top:0;left:50%}.orb em:nth-child(2){top:15%;left:85%}.orb em:nth-child(3){top:50%;left:100%}.orb em:nth-child(4){top:85%;left:85%}.orb em:nth-child(5){top:100%;left:50%}.orb em:nth-child(6){top:50%;left:0}
-.code{position:absolute;right:-2%;bottom:4%;width:min(320px,74%);padding:.9rem 1rem 1rem;border-radius:12px;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);box-shadow:0 30px 60px -25px rgba(27,32,39,.5),0 0 0 1px var(--line);font:500 .8rem/1.8 ui-monospace,Menlo,Consolas,monospace;animation:fl2 7s ease-in-out infinite}
-.code::before{content:"";display:block;width:8px;height:8px;border-radius:50%;background:var(--r);box-shadow:14px 0 var(--s),28px 0 var(--t);margin-bottom:.7rem}
-.code p{overflow:hidden;white-space:nowrap;width:0;border-right:2px solid var(--t);animation:ty 9s steps(var(--n)) infinite var(--d)}
-.code b{color:var(--t)}.code u{color:var(--r);text-decoration:none}
-@keyframes ty{0%{width:0}30%,88%{width:var(--w)}100%{width:0}}
-@keyframes fl2{50%{transform:translateY(-10px)}}
-.term{margin-top:4rem;border-radius:16px;background:var(--ink);color:#dde2e7;font:500 .9rem/2 ui-monospace,Menlo,Consolas,monospace;box-shadow:0 40px 80px -40px rgba(27,32,39,.6);overflow:hidden}
-.th{height:34px;background:rgba(255,255,255,.07);position:relative}
-.th::before{content:"";position:absolute;left:16px;top:13px;width:8px;height:8px;border-radius:50%;background:var(--r);box-shadow:14px 0 var(--s),28px 0 var(--t)}
-.tb{height:10.5rem;padding:0 1.4rem;overflow:hidden;-webkit-mask-image:linear-gradient(transparent,#000 22%,#000 78%,transparent);mask-image:linear-gradient(transparent,#000 22%,#000 78%,transparent)}
-.tb>div{animation:tl 18s linear infinite}
-.tb b{color:#9db5cc;margin-right:.6rem}
-@keyframes tl{to{transform:translateY(-50%)}}
 .fq{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(2rem,6vw,5rem);align-items:start}
 .fq>div:first-child{position:sticky;top:7rem}
 .q{border-bottom:1px solid var(--line)}.q:first-child{border-top:1px solid var(--line)}
@@ -230,11 +207,30 @@ body::before{content:"";position:fixed;inset:-28px 0 0;z-index:-1;pointer-events
 .a p{color:var(--mut);max-width:38rem;padding-bottom:1.6rem}
 @media(max-width:980px){nav{gap:1.2rem;font-size:.92rem}.fq{grid-template-columns:1fr}.fq>div:first-child{position:static}}
 @media(max-width:720px){nav{font-size:1.2rem}}
+
+/* ===== Effets « wow » ===== */
+#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:70}
+h2.sp{perspective:700px}
+.w{display:inline-block;white-space:nowrap}
+h2.sp i{display:inline-block;font-style:normal;opacity:0;transform:translateY(90%) rotateX(-100deg);transform-origin:50% 100%;filter:blur(8px)}
+h2.sp.in i{animation:lt 1s cubic-bezier(.2,.8,.2,1) calc(var(--c)*30ms) forwards}
+@keyframes lt{to{opacity:1;transform:none;filter:none}}
+.vw{clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}
+.shot.in .vw{animation:cr 1.7s cubic-bezier(.7,0,.2,1) .25s backwards}
+.shot.in .vw img{animation:zo 2s cubic-bezier(.2,.8,.2,1) .25s backwards}
+@keyframes cr{from{clip-path:polygon(50% 38%,62% 50%,50% 62%,38% 50%)}}
+@keyframes zo{from{transform:scale(1.6)}}
+.stage::after{content:"";position:absolute;z-index:-1;left:50%;top:50%;width:170%;aspect-ratio:1;translate:-50% -50%;pointer-events:none;background:repeating-conic-gradient(rgba(61,90,115,.1) 0 5deg,transparent 5deg 15deg);-webkit-mask-image:radial-gradient(circle,#000,transparent 62%);mask-image:radial-gradient(circle,#000,transparent 62%);animation:spin 90s linear infinite}
+.stage s{transition:translate .35s ease-out}
+.hero h1 span:not(.gt){background:linear-gradient(105deg,var(--ink) 42%,#9fb0c0 50%,var(--ink) 58%) 100% 0/250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:up .9s cubic-bezier(.2,.8,.2,1) calc(var(--i)*.1s + .2s) forwards,sh 5s ease-in-out calc(var(--i)*.18s + 2s) infinite}
+@keyframes sh{0%{background-position:100% 0}55%,100%{background-position:0 0}}
+@media(prefers-reduced-motion:reduce){h2.sp i{opacity:1;transform:none;filter:none}}
 </style>
 </head>
 <body>
-<div id="in" aria-hidden="true"><div class="sh"><i style="--p:polygon(46% 54%,0 0,58% 0);--x:-10vw;--y:-110vh;--r:-18deg"></i><i style="--p:polygon(46% 54%,58% 0,100% 0);--x:60vw;--y:-90vh;--r:22deg"></i><i style="--p:polygon(46% 54%,100% 0,100% 42%);--x:110vw;--y:-40vh;--r:30deg"></i><i style="--p:polygon(46% 54%,100% 42%,100% 100%);--x:110vw;--y:60vh;--r:-24deg"></i><i style="--p:polygon(46% 54%,100% 100%,44% 100%);--x:30vw;--y:110vh;--r:16deg"></i><i style="--p:polygon(46% 54%,44% 100%,0 100%);--x:-50vw;--y:100vh;--r:-28deg"></i><i style="--p:polygon(46% 54%,0 100%,0 60%);--x:-110vw;--y:50vh;--r:20deg"></i><i style="--p:polygon(46% 54%,0 60%,0 0);--x:-110vw;--y:-40vh;--r:-30deg"></i></div><div class="ld"><div id="ldg"></div><b class="gt"><span id="pc">0</span>%</b><small>&gt; cristalstudio.build()</small></div></div>
+<div id="in" aria-hidden="true"><div class="sh"><i style="--p:polygon(46% 54%,0 0,58% 0);--x:-10vw;--y:-110vh;--r:-18deg"></i><i style="--p:polygon(46% 54%,58% 0,100% 0);--x:60vw;--y:-90vh;--r:22deg"></i><i style="--p:polygon(46% 54%,100% 0,100% 42%);--x:110vw;--y:-40vh;--r:30deg"></i><i style="--p:polygon(46% 54%,100% 42%,100% 100%);--x:110vw;--y:60vh;--r:-24deg"></i><i style="--p:polygon(46% 54%,100% 100%,44% 100%);--x:30vw;--y:110vh;--r:16deg"></i><i style="--p:polygon(46% 54%,44% 100%,0 100%);--x:-50vw;--y:100vh;--r:-28deg"></i><i style="--p:polygon(46% 54%,0 100%,0 60%);--x:-110vw;--y:50vh;--r:20deg"></i><i style="--p:polygon(46% 54%,0 60%,0 0);--x:-110vw;--y:-40vh;--r:-30deg"></i></div><div class="ld"><div id="ldg"></div><b class="gt"><span id="pc">0</span>%</b></div></div>
 <i id="pg"></i>
+<canvas id="fx"></canvas>
 <header><div class="wrap">
 <a class="logo" href="#top">cristal<span class="gt">studio</span></a>
 <nav><a href="#services">Prestations</a><a href="#realisations">Réalisations</a><a href="#methode">Méthode</a><a href="#faq">FAQ</a><a class="btn" href="#contact">Demander un devis</a></nav>
@@ -243,21 +239,19 @@ body::before{content:"";position:fixed;inset:-28px 0 0;z-index:-1;pointer-events
 
 <main>
 <section class="hero" id="top">
-<div class="aur"><i></i><i></i><i></i><canvas id="rain"></canvas></div>
+<div class="aur"><i></i><i></i><i></i></div>
 <div class="wrap">
 <div>
 <h1><span style="--i:0">Chaque</span> <span style="--i:1">détail</span> <span style="--i:2">compte,</span><br><span class="gt" style="--i:3">chaque</span> <span class="gt" style="--i:4">facette</span> <span class="gt" style="--i:5">brille.</span></h1>
 <p class="lead fd">cristalstudio conçoit des pages web personnalisées : élégantes, rapides et pensées pour l'ordinateur, la tablette et le téléphone.</p>
 <div class="btns fd" style="animation-delay:1.3s"><a class="btn" href="#realisations">Voir nos réalisations</a><a class="btn o" href="#contact">Demander un devis</a></div>
 </div>
-<div class="stage" data-tilt aria-hidden="true">
+<div class="stage" aria-hidden="true">
 <b class="ring"></b><b class="ring"></b>
-<div class="orb"><em>&lt;/&gt;</em><em>HTML5</em><em>CSS3</em><em>JS</em><em>SEO</em><em>100/100</em></div>
 <div class="gem"><div class="gi">
 <i style="--p:polygon(0 35%,25% 10%,35% 35%)"></i><i style="--p:polygon(25% 10%,50% 10%,35% 35%)"></i><i style="--p:polygon(50% 10%,35% 35%,65% 35%)"></i><i style="--p:polygon(50% 10%,75% 10%,65% 35%)"></i><i style="--p:polygon(75% 10%,100% 35%,65% 35%)"></i><i style="--p:polygon(0 35%,35% 35%,50% 95%)"></i><i style="--p:polygon(35% 35%,65% 35%,50% 95%)"></i><i style="--p:polygon(65% 35%,100% 35%,50% 95%)"></i>
 </div></div>
 <s style="--z:38px;--c:var(--s);top:8%;left:12%;--d:0s"></s><s style="--z:26px;--c:var(--r);top:22%;right:6%;--d:-1s"></s><s style="--z:32px;--c:var(--t);bottom:10%;left:18%;--d:-2s"></s>
-<div class="code"><p style="--n:26;--w:26ch;--d:0s"><b>const</b> site = <u>"sur-mesure"</u>;</p><p style="--n:23;--w:23ch;--d:1s"><b>await</b> design(<u>"unique"</u>);</p><p style="--n:27;--w:27ch;--d:2s">deploy(site); <b>// ✓ en ligne</b></p></div>
 </div>
 </div>
 </section>
@@ -302,7 +296,6 @@ body::before{content:"";position:fixed;inset:-28px 0 0;z-index:-1;pointer-events
 <div class="st rv"><b>Étape 3</b><h3>Création</h3><p>Nous développons un site rapide, fluide et responsive.</p></div>
 <div class="st rv"><b>Étape 4</b><h3>Lancement</h3><p>Mise en ligne, vérifications finales et accompagnement.</p></div>
 </div>
-<div class="term rv" aria-hidden="true"><div class="th"></div><div class="tb"><div><p><b>✓</b>maquette validée par le client</p><p><b>✓</b>3 formats d'écran testés</p><p><b>✓</b>images compressées et optimisées</p><p><b>✓</b>balises de référencement ajoutées</p><p><b>✓</b>animations fluides à 60 images/s</p><p><b>✓</b>accessibilité vérifiée</p><p><b>✓</b>certificat HTTPS actif</p><p><b>✓</b>site mis en ligne</p></div></div></div>
 </div></section>
 
 <section id="faq"><div class="wrap fq">
@@ -356,15 +349,20 @@ const RM=matchMedia('(prefers-reduced-motion:reduce)').matches,IN=$('#in')[0],pc
 [...gm.querySelectorAll('i')].forEach((e,i)=>e.style.setProperty('--k',i));$('#ldg')[0].append(gm);
 const go=()=>{R.classList.add('go');setTimeout(()=>IN.remove(),1800)};let n=0;
 if(RM)go();else{const iv=setInterval(()=>{n=Math.min(100,n+1+Math.random()*5|0);pc.textContent=n;IN.style.setProperty('--n',n/100);if(n>99){clearInterval(iv);setTimeout(go,450)}},70)}
-/* Pluie de code (canvas) */
-const cv=$('#rain')[0],cx=cv.getContext('2d'),G='01{}<>/;=+'.split('');let W,H,ys,vis=1;
-const rs=()=>{W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight;ys=Array.from({length:W/22|0},()=>Math.random()*H/20)};rs();addEventListener('resize',rs);
-new IntersectionObserver(e=>vis=e[0].isIntersecting).observe(cv);
-(function d(){requestAnimationFrame(d);if(!vis||RM)return;cx.globalCompositeOperation='destination-out';cx.fillStyle='rgba(0,0,0,.1)';cx.fillRect(0,0,W,H);cx.globalCompositeOperation='source-over';cx.font='14px ui-monospace,monospace';ys.forEach((y,i)=>{cx.fillStyle=i%6?'rgba(61,90,115,.7)':'rgba(146,114,62,.85)';cx.fillText(G[Math.random()*G.length|0],i*22,y*20);ys[i]=y*20>H&&Math.random()>.97?0:y+.35})})();
-/* Journal de build, FAQ, boutons magnétiques */
-const tb=$('.tb>div')[0];tb.innerHTML+=tb.innerHTML;
+/* FAQ et boutons magnétiques */
 $('.q button').forEach(b=>b.onclick=()=>b.setAttribute('aria-expanded',b.parentNode.classList.toggle('o')));
 $('.btn').forEach(b=>{b.onpointermove=v=>{const r=b.getBoundingClientRect();b.style.translate=(v.clientX-r.left-r.width/2)*.18+'px '+(v.clientY-r.top-r.height/2)*.3+'px'};b.onpointerleave=()=>b.style.translate=''});
+/* Effets « wow » : titres en lettres 3D, éclats de cristal au curseur, parallaxe du héros */
+$('h2').forEach(e=>{const t=e.textContent;let c=0;e.setAttribute('aria-label',t);e.classList.add('sp');e.innerHTML=t.split(' ').map(w=>'<span class="w" aria-hidden="true">'+[...w].map(l=>'<i style="--c:'+(c++)+'">'+l+'</i>').join('')+'</span>').join(' ');io.observe(e)});
+const fx=$('#fx')[0],fc=fx.getContext('2d'),P=[],C=['#3d5a73','#6f8296','#92723e','#b9c7d4','#1b2027'];let lx=0,ly=0;
+const fr=()=>{fx.width=innerWidth;fx.height=innerHeight};fr();addEventListener('resize',fr);
+const em=(x,y,n,k)=>{for(let i=0;i<n&&P.length<260;i++){const a=Math.random()*6.283,v=Math.random()*k;P.push({x,y,vx:Math.cos(a)*v,vy:Math.sin(a)*v-1,r:a,vr:(Math.random()-.5)*.3,s:3+Math.random()*6,l:1,c:C[Math.random()*C.length|0]})}};
+addEventListener('pointermove',v=>{if(RM)return;const d=Math.hypot(v.clientX-lx,v.clientY-ly);lx=v.clientX;ly=v.clientY;em(lx,ly,Math.min(3,d/12|0),1.6)});
+addEventListener('pointerdown',v=>{if(!RM)em(v.clientX,v.clientY,24,6)});
+(function a(){requestAnimationFrame(a);if(!P.length)return;fc.clearRect(0,0,fx.width,fx.height);for(let i=P.length;i--;){const p=P[i];p.x+=p.vx;p.y+=p.vy;p.vy+=.07;p.r+=p.vr;p.l-=.016;if(p.l<=0){P.splice(i,1);continue}fc.save();fc.translate(p.x,p.y);fc.rotate(p.r);fc.globalAlpha=p.l;fc.fillStyle=p.c;fc.beginPath();fc.moveTo(0,-p.s);fc.lineTo(p.s*.6,0);fc.lineTo(0,p.s);fc.lineTo(-p.s*.6,0);fc.fill();fc.restore()}if(!P.length)fc.clearRect(0,0,fx.width,fx.height)})();
+const hs=$('.hero')[0],sg=$('.stage')[0],sp=$('s',sg),sv=(k,v)=>sg.style.setProperty(k,v);
+hs.onpointermove=v=>{const x=v.clientX/innerWidth-.5,y=v.clientY/innerHeight-.5;sv('--ry',x*26+'deg');sv('--rx',-y*20+'deg');sp.forEach((e,i)=>e.style.translate=-x*(40+i*30)+'px '+-y*(40+i*30)+'px')};
+hs.onpointerleave=()=>{sv('--rx','0deg');sv('--ry','0deg');sp.forEach(e=>e.style.translate='')};
 </script>
 </body>
 </html>
